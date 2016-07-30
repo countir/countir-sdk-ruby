@@ -22,7 +22,30 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'countir'
+
+client = Countir::Client.new(api_key: $YOUR_API_KEY)
+
+# get account code list
+client.list_account_codes
+
+# get journal list
+client.list_journals(offset: nil, limit: nil)
+
+# post journal
+client.post_journal(
+    transaction_date: '2016-01-01',
+    memo: 'hogehoge',
+    entries: [
+        { account_code_id: 1,
+            debit_or_credit
+        },
+        {
+        },
+    ]
+)
+```
 
 ## Development
 
