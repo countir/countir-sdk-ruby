@@ -35,15 +35,18 @@ client.list_journals(offset: nil, limit: nil)
 
 # post journal
 client.post_journal(
-    transaction_date: '2016-01-01',
-    memo: 'hogehoge',
-    entries: [
-        { account_code_id: 1,
-            debit_or_credit
-        },
-        {
-        },
-    ]
+  transaction_date: '2016-01-01',
+  memo: 'hogehoge',
+  entries: [
+    { account_code_id: 1,
+      debit_or_credit: 'credit',
+      price: 100,
+    },
+    { account_code_id: 2,
+      debit_or_credit: 'debit',
+      price: 100,
+    },
+  ]
 )
 ```
 
