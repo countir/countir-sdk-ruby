@@ -2,7 +2,7 @@ module Countir
   class Client
     include ResourceBasedMethods
 
-    URL = 'http://api.countir.jp'
+    URL = 'https://api.countir.jp'
 
     def initialize(api_key: nil)
       @api_key = api_key
